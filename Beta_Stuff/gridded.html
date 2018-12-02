@@ -1,0 +1,101 @@
+<!DOCTYPE htmml>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <title>SEBA - Schneider Electric</title>
+
+  <!-- STYLING -->
+  <link rel="stylesheet" href="./style.css">
+  <style></style>
+</head>
+<body>
+<div class="wrapper">
+  <!-- HEADERS -->
+<div>
+  <div class="header logo-wrapper">
+    <img id="logo" src="./schneider_logo.png" alt="img-logo" class="img-thumbnail"/>
+  </div>
+  <div class="header title-wrapper">
+    <h3 class="">SEBA Naming Convention</h3>
+  </div>
+  <div class="header contact-wrapper">
+    <a href="#">Download CSV</a> | 
+    <a href="mailto:ann.patten@schneider-electric.com">Contact Us</a>
+  </div>
+</div>
+  <!-- end|Header -->
+
+  <!-- SPACER <div class="row"><div style="height: 30px;"></div></div>-->
+
+  <!-- SEARCH BAR -->
+  <div class="search-wrapper">
+    <input id="search-text" type="text" placeholder="Search here..."
+      aria-label="Tag search field"/>
+    <span id="tag-count" class="muted" style="padding-left: 1em"></span>
+  </div><!-- end|Search -->
+
+  <!-- SPACER <div class="row"><div style="height: 30px;"></div></div>-->
+
+  <!-- TAG TABLE -->
+  <div class="table-wrapper">
+  <table>
+  <!-- <caption>Table of SEBA Tags</caption> -->
+  <thead>
+    <tr>
+      <th scope="col">Tag</th>
+      <th scope="col">Descriptions</th>
+      <th scope="col">Type</th>
+<!-- TODO: Beta-Testing
+      <th scope="col">Type <span id="tag-type-arrow">&#8675;</span>
+        <div id="tag-type-box" style="display: none">
+          <input type="checkbox" name="type" value="hardware" checked/>Hardware<br/>
+          <input type="checkbox" name="type" value="software" checked/>Software<br/>
+          <input type="checkbox" name="type" value="partial" checked/>Partial
+        </div>
+      </th>
+-->
+    </tr>
+  </thead>
+
+    <!-- Template to display a row for each Tag -->
+    <template id="sample-row-template">
+      <tr class="tag-row">
+        <td scope="row" class="tag-name">...</td>
+        <td class="tag-desc">...</td>
+        <td class="tag-type">...</td>
+      </tr>
+    </template>
+
+  <tbody id="tag-table-body">
+
+    <!-- Display below row if No Results -->
+    <tr id="no-results-row">
+      <td colspan="3" class="text-center">
+        There are no results...
+        <button type="button" onclick="initiatePage()">Display all Tags</button>
+      </td>
+    </tr>
+
+  </tbody>
+  </table>
+  </div><!-- end|Table -->
+
+  <!-- FOOTER -->
+  <div class="footer muted">
+    <span>SEBA Naming Convention</span>
+    <span style="font-style: italic">Last revised: December 2018</span>
+    <span>Schneider Electric</span>
+  </div>
+  <!-- end|Footer -->
+
+</div><!-- end|container -->
+
+  <!-- SCRIPTS -->
+  <script src="./seba_tags_few.js" rel="text/javascript"></script>
+  <script src="./app.js" rel="text/javascript"></script>
+
+</body>
+</html>
+
